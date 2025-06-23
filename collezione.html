@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <!-- Metadati DC -->
+  <meta name="DC.title" content="Esplora per Autore - Viaggio tra i disegni del Rinascimento" />
+  <meta name="DC.subject" content="Leonardo, Michelangelo, Raffaello, disegni rinascimentali" />
+  <meta name="DC.language" content="it" />
+  <meta name="DC.format" content="text/html" />
+  <meta name="DC.type" content="text" />
+
+  <!-- Link al file TEI -->
+  <link rel="alternate" type="application/tei+xml" href="item1.xml" title="TEI Metadata di Leonardo da Vinci" />
+
+  <title>Collezione Disegni Prepatori Rinascimento</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .filtri-opere {
+      margin: 30px 20px 10px 20px;
+    }
+
+    .filtri-opere h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    #filtro-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    #filtro-form input,
+    #filtro-form select {
+      padding: 8px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      align-items: stretch;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      min-height: 400px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card h3 {
+      margin: 0.8rem 1rem 0.4rem;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .card p {
+      margin: 0 1rem 1rem;
+      font-size: 0.95rem;
+      color: #555;
+      min-height: 40px;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browsing_autore.html">Autori</a></li>
+        <li><a href="browsing_tema.html">Temi</a></li>
+        <li><a href="collezione.html">Collezione</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+      <form class="search-form" action="search.html" method="get">
+        <input type="text" name="q" placeholder="Cerca disegno, autore...">
+        <button type="submit">🔍</button>
+      </form>
+    </nav>
+    <h1>Collezione Disegni Preparatori del Rinascimento</h1>
+    <p class="subtitle">Leonardo, Michelangelo e Raffaello</p>
+  </header>
+
+  <!-- Filtro parole chiave -->
+  <section class="filtri-opere">
+    <h3>Opere</h3>
+    <form id="filtro-form">
+      <input type="text" id="ricerca-opere" placeholder="Cerca per titolo o descrizione..." />
+      <select id="filtro-autore">
+        <option value="">Tutti gli autori</option>
+        <option value="Leonardo da Vinci">Leonardo da Vinci</option>
+        <option value="Michelangelo Buonarroti">Michelangelo Buonarroti</option>
+        <option value="Raffaello Sanzio">Raffaello Sanzio</option>
+      </select>
+      <select id="filtro-parolechiave">
+        <option value="">Tutte le parole chiave</option>
+        <option value="anatomia">Anatomia</option>
+        <option value="cavallo">Cavallo</option>
+        <option value="Natività">Natività</option>
+        <option value="Sant'Anna">Sant'Anna</option>
+      </select>
+      <select id="filtro-istituzione">
+        <option value="">Tutte le istituzioni</option>
+        <option value="Uffizi">Uffizi</option>
+        <option value="National Gallery">National Gallery</option>
+        <option value="Metropolitan Museum of Art">Metropolitan Museum of Art</option>
+        <option value="Royal Library at Windsor Castle">Royal Library at Windsor Castle</option>
+      </select>
+    </form>
+  </section>
+
+  <!-- Schede dei disegni -->
+  <section class="gallery">
+    <a href="dettaglio-opera1.html" class="card-link">
+      <article class="card" data-autore="Leonardo da Vinci" data-parolechiave="anatomia" data-istituzione="Uffizi">
+        <img src="img/Leonardo/leonardo3.jpg" alt="Studio anatomico di Leonardo">
+        <h3>Studio Anatomico</h3>
+        <p><strong>Leonardo da Vinci</strong> – ca. 1490</p>
+      </article>
+    </a>
+
+    <a href="itemleo.html" class="card-link">
+      <article class="card" data-autore="Michelangelo Buonarroti" data-parolechiave="Giovane" data-parolechiave="nudo" data-parolechiave="schiena" data-istituzione="Casa Buonarroti">
+        <img src="img/Michelangelo/michelangelo2.jpg" alt="Giovane nudo di schiena" />
+        <h3>Giovane nudo di schiena</h3>
+        <p><strong>Michelangelo Buonarroti</strong> 1504-1505</p>
+      </article>
+    </a>
+
+    <a href="#" class="card-link">
+      <article class="card" data-autore="Leonardo da Vinci" data-parolechiave="Cavallo" data-istituzione="Royal Library at Windsor Castle">
+        <img src="img/Leonardo/leonardo4.jpg" alt="Studio di Cavallo" />
+        <h3>Studio di Cavallo</h3>
+        <p><strong>Leonardo da Vinci</strong> ca. 1490 </p>
+      </article>
+    </a>
+
+    <a href="#" class="card-link">
+      <article class="card" data-autore="Leonardo da Vinci" data-parolechiave="Natività" data-istituzione="Metropolitan Museum Of Art">
+        <img src="img/Leonardo/schizzoLeo1.jpg" alt="Quattro studi per una Natività" />
+        <h3>Quattro studi per una Natività</h3>
+        <p><strong>Leonardo da Vinci</strong> 1480-85</p>
+      </article>
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025 - Progetto universitario di Digital Humanities</p>
+  </footer>
+
+  <!-- Script JavaScript per filtro -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('filtro-form');
+      const ricerca = document.getElementById('ricerca-opere');
+      const autore = document.getElementById('filtro-autore');
+      const parolechiave = document.getElementById('filtro-parolechiave');
+      const istituzione = document.getElementById('filtro-istituzione');
+      const opere = document.querySelectorAll('.card');
+
+      function filtraOpere() {
+        const testo = ricerca.value.toLowerCase();
+        const autoreVal = autore.value;
+        const paroleVal = parolechiave.value;
+        const istVal = istituzione.value;
+
+        opere.forEach(opera => {
+          const titolo = opera.querySelector('h3')?.textContent.toLowerCase() || '';
+          const descrizione = opera.querySelector('p')?.textContent.toLowerCase() || '';
+          const autoreOp = opera.dataset.autore || '';
+          const paroleOp = opera.dataset.parolechiave || '';
+          const istOp = opera.dataset.istituzione || '';
+
+          const corrispondeTesto = titolo.includes(testo) || descrizione.includes(testo);
+          const corrispondeAutore = !autoreVal || autoreOp === autoreVal;
+          const corrispondeParole = !paroleVal || paroleOp.includes(paroleVal);
+          const corrispondeIstituzione = !istVal || istOp === istVal;
+
+          opera.parentElement.style.display = (corrispondeTesto && corrispondeAutore && corrispondeParole && corrispondeIstituzione) ? '' : 'none';
+        });
+      }
+
+      form.addEventListener('input', filtraOpere);
+    });
+  </script>
+</body>
+</html>
