@@ -1,0 +1,355 @@
+/* Impostazioni base */
+body {
+  font-family: "Georgia", serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f3f0;
+}
+
+header {
+  background-color: #242424;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e1e1e;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e0b89d;
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.search-form input[type="text"] {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.search-form button {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  background-color: #e0b89d;
+  color: #1e1e1e;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #d8a377;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+.intro {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  height: 500px;
+}
+.carousel-section h2 {
+  text-align: center;
+}
+
+.carousel-section h2 {
+  caption-side: ;
+   position: absolute;
+  top: 50%; /* centra verticalmente */
+  left: 50%; /* centra orizzontalmente */
+  transform: translate(-50%, -50%); /* allinea esattamente al centro */
+  background: rgba(0, 0, 0, 0.5); /* sfondo trasparente */
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 8px;
+
+}
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.image-fade-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.image-fade-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation-name: fadeImages3;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  border-radius: 12px;
+}
+
+/* Imposto i ritardi di animazione per alternare le immagini */
+
+.image-fade-container img:nth-child(1) {
+  animation-delay: 0s;
+  opacity: 1; /* visibile all'inizio */
+}
+
+.image-fade-container img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.image-fade-container img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+/* Keyframes per 3 immagini - ogni immagine è visibile per 3s */
+
+@keyframes fadeImages3 {
+  0% { opacity: 1; }
+  33.33% { opacity: 0; }
+  66.66% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+  background-color: #e0e0e0;
+}
+.mappa {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #fefcf7; /* chiaro, neutro */
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* ombra molto leggera */
+}
+
+.mappa iframe {
+  width: 100%;
+  height: 420px;
+  border: none; /* niente bordo */
+  border-radius: 10px;
+  box-shadow: none; /* niente ombra */
+}
+
+
+.faq details {
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq details[open] {
+  background-color: #f0f8ff;
+  border-color: #90c7ff;
+}
+
+.faq summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  outline: none;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+
+.caption {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.browsing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.browse-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.browse-card h2 {
+  color: #3a2e2a;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #8a5a44;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5c3a2c;
+}
+
+footer {
+  background-color: #242424;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* nascosto di default */
+  background-color: #e0b89d;
+  color: #1e1e1e;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  z-index: 1001;
+}
+
+#backToTop:hover {
+  background-color: #d8a377;
+}
+

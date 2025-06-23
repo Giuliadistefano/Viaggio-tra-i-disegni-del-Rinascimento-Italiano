@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Anatomico – Leonardo da Vinci</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="alternate" type="application/tei+xml" href="leonardo3.xml" title="Metadati TEI">
+  <style>
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Container con immagine e pulsanti */
+    .image-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .image-wrapper {
+      flex: 1;
+      max-width: 800px;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ddd;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #ccc;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      user-select: none;
+    }
+
+    .nav-btn:hover {
+      background: rgba(240, 240, 240, 0.9);
+    }
+
+    /* Navigazione ancorata */
+    .anchor-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      border-bottom: 1px solid #ddd;
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .anchor-nav a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    .anchor-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .info-section {
+      margin-bottom: 2rem;
+    }
+
+    .info-section h2 {
+      margin-bottom: 0.5rem;
+      color: #222;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 0.5rem 1rem;
+    }
+
+    dt {
+      font-weight: bold;
+      color: #444;
+    }
+
+    dd {
+      margin: 0;
+      color: #555;
+    }
+    .tags-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tags-section h2 {
+  margin-bottom: 0.5rem;
+  color: #222;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0b89d;
+  color: #1e1e1e;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #d8a377;
+}
+
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f6f5f4;
+      border-top: 1px solid #ddd;
+    }
+    #backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* nascosto di default */
+  background-color: #e0b89d;
+  color: #1e1e1e;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  z-index: 1001;
+}
+
+#backToTop:hover {
+  background-color: #d8a377;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="browsing_autore.html">Autori</a></li>
+    <li><a href="browsing_tema.html">Temi</a></li>
+    <li><a href="Collezione.html">Collezione</a></li>
+    <li><a href="Contatti.html">Contatti</a></li>
+  </ul>
+  <form class="search-form" action="#" method="GET">
+    <input type="text" placeholder="Cerca..." name="q" />
+    <button type="submit">OK</button>
+  </form>
+</nav>
+
+    <h1 class="title">Studio anatomico di feto nell'utero</h1>
+    <p class="subtitle">Leonardo da Vinci (1452-1519)</p>
+  </header>
+
+  <main>
+    <div class="image-nav">
+      <button class="nav-btn" id="prev" aria-label="Opera precedente">&larr;</button>
+      <div class="image-wrapper">
+        <img src="img/Leonardo/leonardo3.jpg" alt="Studio anatomico di Leonardo da Vinci" />
+      </div>
+      <button class="nav-btn" id="next" aria-label="Opera successiva">&rarr;</button>
+    </div>
+
+    <nav class="anchor-nav" aria-label="Navigazione sezioni">
+      <a href="#details">Dettagli</a>
+      <a href="#description">Descrizione</a>
+      <a href="#location">Collocazione</a>
+    </nav>
+
+    <section id="details" class="info-section">
+      <h2>Dettagli</h2>
+      <dl>
+        <dt>Artista</dt><dd>Leonardo da Vinci (1452-1519)</dd>
+        <dt>Data</dt><dd>ca. 1511</dd>
+        <dt>Tecnica</dt><dd>Penna e inchiostro su carta</dd>
+        <dt>Dimensioni</dt><dd>30.4 × 22.0 cm</dd>
+        <dt>Collezione</dt><dd>Royal Collection Trust, Londra</dd>
+      </dl>
+    </section>
+
+    <section id="description" class="info-section">
+      <h2>Descrizione</h2>
+      <p>Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano. È uno degli esempi più significativi del connubio tra arte e ricerca empirica nel Rinascimento.</p>
+    </section>
+
+    <section id="location" class="info-section">
+      <h2>Luogo</h2>
+      <p>Esposizione permanente presso Royal Collection Trust, Londra</p>
+    </section>
+    <section class="tags-section" aria-label="Parole chiave">
+  <h2>Parole chiave</h2>
+  <div class="tags">
+    <a href="collezione_mani.html?q=anatomia" class="tag">Anatomia</a>
+    <a href="browsing_autore.html?q=Leonardo" class="tag">Leonardo da Vinci</a>
+    <a href="browsing_tema.html?q=Rinascimento" class="tag">Rinascimento</a>
+    <a href="browsing_tema.html?q=disegno" class="tag">Disegno</a>
+    <a href="browsing_tema.html?q=corpo%20umano" class="tag">Corpo umano</a>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Viaggio nel Rinascimento</p>
+  </footer>
+<button id="backToTop" aria-label="Torna su" title="Torna su">&#8679;</button>
+
+  <script>
+    const images = [
+
+      {
+        src: 'img/Leonardo/leonardo3.jpg',
+        alt: 'Studio anatomico di feto nell utero',
+        title: 'Studio anatomico di feto nell utero',
+        description: 'Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano.',
+        location: 'Royal Collection Trust.'
+      },
+        
+      {
+        src: 'img/Leonardo/schizzoleo1.jpg',
+        alt: 'Quattro studi per una Natività',
+        title: 'Quattro studi per una Natività',
+        description: 'Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano.',
+        location: 'Esposizione permanente presso il Metropolitan Museum Of Art di New York.'
+      },
+      {
+        src: 'img/Leonardo/leonardo4.jpg',
+        alt: 'Studio di Cavallo',
+        title: 'Studio di Cavallo',
+        description: 'Studio sulle proporzioni ideali del corpo umano, riflettendo la ricerca scientifica di Leonardo.',
+        location: 'Royal Library at Windsor Castle'
+      },
+      {
+        src: 'img/Leonardo/Itemleo1.jpg',
+        alt: 'Cartone di sant Anna',
+        title: 'Cartone di sant Anna',
+        description: 'Disegno dettagliato dei gruppi muscolari, esempio dell’approccio analitico di Leonardo.',
+        location: 'National Gallery'
+      }
+    ];
+
+    let idx = 0;
+    const imgEl = document.querySelector('.image-wrapper img');
+    const titleEl = document.querySelector('.title');
+    const subtitleEl = document.querySelector('.subtitle');
+    const descriptionEl = document.querySelector('#description p');
+    const locationEl = document.querySelector('#location p');
+
+    function updateContent() {
+      const img = images[idx];
+      imgEl.src = img.src;
+      imgEl.alt = img.alt;
+      titleEl.textContent = img.title;
+      // Rimane fisso il nome artista e data
+      subtitleEl.textContent = 'Leonardo da Vinci – ca. 1490';
+      descriptionEl.textContent = img.description;
+      locationEl.textContent = img.location;
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      idx = (idx - 1 + images.length) % images.length;
+      updateContent();
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      idx = (idx + 1) % images.length;
+      updateContent();
+    });
+
+    // inizializza la pagina
+    updateContent();
+    const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) { // mostra il bottone dopo aver scrollato 200px
+    backToTopBtn.style.display = 'block';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'  // scroll dolce verso l'alto
+  });
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Studio del feto nell’utero</title>
+        <author>Leonardo da Vinci</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Royal Collection Trust</publisher>
+        <pubPlace>Windsor Castle</pubPlace>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <institution>Royal Collection Trust</institution>
+            <repository>Royal Library, Windsor Castle</repository>
+            <idno>RCIN 919102</idno>
+          </msIdentifier>
+          <physDesc>
+            <objectDesc>
+              <supportDesc>
+                <support>Paper, pen and ink with some wash, over traces of black chalk.</support>
+              </supportDesc>
+            </objectDesc>
+            <handDesc>
+              <handNote>Mirror writing by Leonardo in brown ink.</handNote>
+            </handDesc>
+            <additions>Accompanied by anatomical sketches and notes surrounding the main image.</additions>
+            <extent>1 sheet</extent>
+          </physDesc>
+          <history>
+            <origin>
+              <origPlace>Italy, likely Milan</origPlace>
+              <origDate when="1511">circa 1511</origDate>
+            </origin>
+            <provenance>
+              <p>Part of the Anatomical Manuscript A, later acquired by the British Royal Collection.</p>
+            </provenance>
+          </history>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en">English</language>
+        <language ident="it">Italian</language>
+      </langUsage>
+      <textClass>
+        <keywords>
+          <term>anatomy</term>
+          <term>fetus</term>
+          <term>Leonardo da Vinci</term>
+          <term>Renaissance drawing</term>
+          <term>mirror writing</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+
+  <facsimile>
+    <graphic url="https://www.rct.uk/sites/default/files/collection-online/d/5/237107-1522146961.jpg" />
+  </facsimile>
+
+    <text>
+    <body>
+      <div type="description">
+        <p>This sheet by Leonardo da Vinci contains one of the earliest accurate renderings of a fetus in the womb, accompanied by anatomical and conceptual notes. It exemplifies his intense study of human reproduction and internal organs.</p>
+      </div>
+
+      <div type="transcription" xml:lang="it">
+        <p>Questo foglio di Leonardo da Vinci contiene una delle prime rappresentazioni accurate di un feto nell’utero, accompagnata da annotazioni anatomiche e concettuali. Rappresenta un esempio dell’intenso studio che l’artista dedicò alla riproduzione umana e agli organi interni.</p>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Metadati DC -->
+  <meta name="DC.title" content="Esplora per Autore - Viaggio tra i disegni del Rinascimento" />
+  <meta name="DC.subject" content="Leonardo, Michelangelo, Raffaello, disegni rinascimentali" />
+  <meta name="DC.language" content="it" />
+  <meta name="DC.format" content="text/html" />
+  <meta name="DC.type" content="text" />
+  
+  <title>Esplora per Autore</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  <style>
+  .image-fade-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .image-fade-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .image-fade-container img.show {
+    opacity: 1;
+  }
+
+  .smaller-heading {
+    font-size: 1.4rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="browsing_autore.html">Autori</a></li>
+      <li><a href="browsing_tema.html">Temi</a></li>
+      <li><a href="collezione.html">Collezione</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <form class="search-form" action="search.html" method="get">
+      <input type="text" name="q" placeholder="Cerca disegno, autore...">
+      <button type="submit">🔍</button>
+    </form>
+    </nav>
+
+  <h1>Autori rinascimentali</h1>
+  <p class="subtitle">Scopri i disegni preparatori dei grandi maestri</p>
+  <p1>Seleziona un autore per esplorare i suoi disegni preparatori e accedere a materiali descrittivi, schede tecniche e fonti critiche.</p1>
+</header>
+
+  <main>
+    <section class="browsing">
+      <div class="browse-card">
+  <h2>Leonardo da Vinci</h2>
+  <div class="image-fade-container">
+    <img src="img/Leonardo/Leonardo1.jpg" alt="Disegno Leonardo 1" />
+    <img src="img/Leonardo/Leonardo3.jpg" alt="Disegno Leonardo 2" />
+    <img src="img/Leonardo/Leonardo4.jpg" alt="Disegno Leonardo 3" />
+    </div>
+  <p>Studi di cavalli, mani, volti e progetti ingegneristici.</p>
+  <a href="collezione_leonardo.html" class="btn">Scopri</a>
+     </div>
+      <div class="browse-card">
+        <h2 class="smaller-heading">Michelangelo Buonarroti</h2>
+        <div class="image-fade-container">
+          <img src="img/Michelangelo/michelangelo1.jpg" alt="Disegno michelangelo 1">
+          <img src="img/Michelangelo/michelangelo2.jpg" alt="Disegno michelangelo 2">
+          <img src="img/Michelangelo/michelangelo3.jpg" alt="Disegno michelangelo 3">
+        </div>
+        <p>Disegni preparatori per affreschi, sculture e studi anatomici.</p>
+        <a href="collezione._michelangelo.html" class="btn">Scopri</a>
+      </div>
+
+      <div class="browse-card">
+        <h2>Raffaello Sanzio</h2>
+        <div class="image-fade-container">
+          <img src="img/Raffaello/raffaello1.jpg" alt="Disegno raffaello 1">
+          <img src="img/Raffaello/raffaello2.jpg" alt="Disegno raffaello 2">
+          <img src="img/Raffaello/raffaello3.jpg" Alt="Disegno raffaello 3">
+        </div>
+        <p>Composizioni per pale d’altare, Madonne e stanze vaticane.</p>
+        <a href="collezione_raffaello.html" class="btn">Scopri</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Progetto universitario di Digital Humanities</p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://viaf.org/" target="_blank">VIAF</a></li>
+      <li><a href="https://www.getty.edu/research/tools/vocabularies/aat/" target="_blank">AAT Getty</a></li>
+    </ul>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const containers = document.querySelectorAll(".image-fade-container");
+
+    containers.forEach(container => {
+      const images = container.querySelectorAll("img");
+      let currentIndex = 0;
+
+      images.forEach((img, i) => {
+        img.classList.remove("show");
+        if (i === 0) img.classList.add("show");
+      });
+
+      setInterval(() => {
+        images[currentIndex].classList.remove("show");
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add("show");
+      }, 2000);
+    });
+  });
+</script>
+
+</body>
+</html>
