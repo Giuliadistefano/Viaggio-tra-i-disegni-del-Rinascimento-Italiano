@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Metadati Dublin Core -->
+  <meta name="DC.title" content="Studio anatomico di feto nell'utero" />
+  <meta name="DC.creator" content="Leonardo da Vinci" />
+  <meta name="DC.date" content="1511" />
+  <meta name="DC.format" content="Penna e inchiostro su carta" />
+  <meta name="DC.type" content="Disegno" />
+  <meta name="DC.subject" content="anatomia, feto, corpo umano, Rinascimento" />
+  <meta name="DC.identifier" content="leonardo3.html" />
+  <meta name="DC.language" content="it" />
+
+  <!-- Collegamenti a file di metadati esterni -->
+  <link rel="alternate" type="application/xml" href="leonardo3_dc.xml" title="Dublin Core XML" />
+  <link rel="alternate" type="application/tei+xml" href="leonardo3.xml" title="TEI XML" />
+
   <title>Studio Anatomico – Leonardo da Vinci</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="alternate" type="application/tei+xml" href="leonardo3.xml" title="Metadati TEI">
   <style>
 
     main {
@@ -162,19 +176,18 @@
 <body>
   <header>
     <nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="browsing_autore.html">Autori</a></li>
-    <li><a href="browsing_tema.html">Temi</a></li>
-    <li><a href="collezione.html">Collezione</a></li>
-    <li><a href="Contatti.html">Contatti</a></li>
-  </ul>
-  <form class="search-form" action="#" method="GET">
-    <input type="text" placeholder="Cerca..." name="q" />
-    <button type="submit">OK</button>
-  </form>
-</nav>
-
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browsing_autore.html">Autori</a></li>
+        <li><a href="browsing_tema.html">Temi</a></li>
+        <li><a href="Collezione.html">Collezione</a></li>
+        <li><a href="Contatti.html">Contatti</a></li>
+      </ul>
+      <form class="search-form" action="#" method="GET">
+        <input type="text" placeholder="Cerca..." name="q" />
+        <button type="submit">OK</button>
+      </form>
+    </nav>
     <h1 class="title">Studio anatomico di feto nell'utero</h1>
     <p class="subtitle">Leonardo da Vinci (1452-1519)</p>
   </header>
@@ -192,6 +205,7 @@
       <a href="#details">Dettagli</a>
       <a href="#description">Descrizione</a>
       <a href="#location">Collocazione</a>
+      <a href="#metadata">Metadati</a>
     </nav>
 
     <section id="details" class="info-section">
@@ -201,30 +215,41 @@
         <dt>Data</dt><dd>ca. 1511</dd>
         <dt>Tecnica</dt><dd>Penna e inchiostro su carta</dd>
         <dt>Dimensioni</dt><dd>30.4 × 22.0 cm</dd>
-        <dt>Collezione</dt><dd>Royal Collection Trust, Londra</dd>
+        <dt>Collezione</dt><dd><a href="https://www.rct.uk/collection/919102">Royal Collection Trust, Londra</a></dd>
       </dl>
     </section>
 
     <section id="description" class="info-section">
       <h2>Descrizione</h2>
-      <p>Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano. È uno degli esempi più significativi del connubio tra arte e ricerca empirica nel Rinascimento.</p>
+      <p>Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano. 
+        È uno degli esempi più significativi del connubio tra arte e ricerca empirica nel Rinascimento.</p>
     </section>
 
     <section id="location" class="info-section">
       <h2>Luogo</h2>
-      <p>Esposizione permanente presso Royal Collection Trust, Londra</p>
+      <p>Esposizione permanente presso <a href="https://www.rct.uk/collection">Royal Collection Trust, Londra</a></p>
     </section>
-    <section class="tags-section" aria-label="Parole chiave">
-  <h2>Parole chiave</h2>
-  <div class="tags">
-    <a href="collezione_mani.html?q=anatomia" class="tag">Anatomia</a>
-    <a href="browsing_autore.html?q=Leonardo" class="tag">Leonardo da Vinci</a>
-    <a href="browsing_tema.html?q=Rinascimento" class="tag">Rinascimento</a>
-    <a href="browsing_tema.html?q=disegno" class="tag">Disegno</a>
-    <a href="browsing_tema.html?q=corpo%20umano" class="tag">Corpo umano</a>
-  </div>
-</section>
 
+    <section id="metadata" class="info-section">
+      <h2>Metadati</h2>
+      <ul>
+        <li><a href="leonardo3dc.xml" target="_blank">Metadati Dublin Core (XML)</a></li>
+        <li><a href="leonardo3.xml" target="_blank">Descrizione completa TEI (XML)</a></li>
+        <li><a href="https://viaf.org/viaf/24604206" target="_blank">Leonardo da Vinci su VIAF</a></li>
+        <li><a href="https://www.wikidata.org/wiki/Q762" target="_blank">Leonardo da Vinci su Wikidata</a></li>
+      </ul>
+    </section>
+
+    <section class="tags-section" aria-label="Parole chiave">
+      <h2>Parole chiave</h2>
+      <div class="tags">
+        <a href="collezione_mani.html?q=anatomia" class="tag">Anatomia</a>
+        <a href="browsing_autore.html?q=Leonardo" class="tag">Leonardo da Vinci</a>
+        <a href="browsing_tema.html?q=Rinascimento" class="tag">Rinascimento</a>
+        <a href="browsing_tema.html?q=disegno" class="tag">Disegno</a>
+        <a href="browsing_tema.html?q=corpo%20umano" class="tag">Corpo umano</a>
+      </div>
+    </section>
   </main>
 
   <footer>
