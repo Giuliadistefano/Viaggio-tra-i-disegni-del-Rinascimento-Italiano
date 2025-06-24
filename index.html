@@ -15,6 +15,8 @@
 
   <title>Viaggio tra i disegni del Rinascimento Italiano</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
   <header>
@@ -91,15 +93,8 @@
     </section>
 
 <section class="mappa">
-  <h2>Luoghi dei disegni</h2>
-  <iframe 
-    src="https://www.google.com/maps/d/u/0/embed?mid=1idxhOVWCqPdD0jCXRimWKiQwVvZH0PE&ehbc=2E312F"
-    width="100%" 
-    height="420" 
-    style="border:none; border-radius: 10px;" 
-    allowfullscreen="" 
-    loading="lazy">
-  </iframe>
+  <h2>Luoghi di conservazione dei disegni</h2>
+  <div id="mappa" style="height: 420px; border-radius: 10px;"></div>
 </section>
 
 <section class="faq">
@@ -130,6 +125,8 @@
   </footer>
   <button id="backToTop" aria-label="Torna su" title="Torna su">&#8679;</button>
 </body>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track.children);
@@ -160,6 +157,21 @@
     currentIndex = (currentIndex + 1) % slides.length;
     updateCarousel();
   }, 5000);
+
+   var map = L.map('mappa').setView([43.7696, 11.2558], 5);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([43.767925031711904, 11.255611204500806]).addTo(map)
+    .bindPopup('Uffizi, Firenze').openPopup();
+
+  L.marker([51.5047057535388, -0.13736465091709985]).addTo(map)
+    .bindPopup('Royal Collection Trust, Londra');
+
+  L.marker([40.779452819763904, -73.96326546072208]).addTo(map)
+    .bindPopup('Metropolitan Museum of Art, New York');
 </script>
 
 
