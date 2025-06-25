@@ -15,10 +15,13 @@
   <meta name="DC.language" content="it" />
 
   <!-- Collegamenti a file di metadati esterni -->
-  <link rel="alternate" type="application/xml" href="leonardo3_dc.xml" title="Dublin Core XML" />
+  <link rel="alternate" type="application/xml" href="leonardo3dc.xml" title="Dublin Core XML" />
   <link rel="alternate" type="application/tei+xml" href="leonardo3.xml" title="TEI XML" />
+  <link rel="alternate" type="application/xml" href="iccd.xml" title="ICCD XML" />
+
 
   <title>Studio Anatomico – Leonardo da Vinci</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
   <style>
 
@@ -196,7 +199,7 @@
     <div class="image-nav">
       <button class="nav-btn" id="prev" aria-label="Opera precedente">&larr;</button>
       <div class="image-wrapper">
-        <img src="img/Leonardo/leonardo3.jpg" alt="Studio anatomico di Leonardo da Vinci" />
+        <img src="img/Leonardo/leonardo3.jpg" alt="Studio anatomico di feto nell'utero" />
       </div>
       <button class="nav-btn" id="next" aria-label="Opera successiva">&rarr;</button>
     </div>
@@ -219,12 +222,18 @@
       </dl>
     </section>
 
-    <section id="description" class="info-section">
-      <h2>Descrizione</h2>
-      <p>Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano. 
-        È uno degli esempi più significativi del connubio tra arte e ricerca empirica nel Rinascimento.</p>
-    </section>
-
+   <section id="description" class="info-section">
+  <h2>Descrizione</h2>
+  <p>
+    Questo celebre disegno anatomico di Leonardo da Vinci, conosciuto come <strong>Feto nell’utero</strong>, mostra l’interesse dell’artista per la struttura del corpo umano e la funzione degli organi interni. L’immagine è accompagnata da annotazioni speculari e riflette studi basati sull’osservazione diretta di cadaveri.
+  </p>
+  <p>
+    Il volume <em>Leonardo. L’anatomia. Ediz. illustrata</em>, pubblicato da Carlo Pedretti, Domenico Laurenza e Paola Salvi nel 2005 per Giunti, analizza questo disegno all’interno di un ampio excursus sull’attività anatomica di Leonardo, evidenziandone il valore scientifico, la precisione grafica e la carica espressiva.
+  </p>
+  <p>
+    Gli autori sottolineano come tali studi costituiscano un <strong>unicum tra arte e scienza nel Rinascimento</strong>, anticipando concetti fondamentali della medicina moderna.
+  </p>
+</section>
     <section id="location" class="info-section">
       <h2>Luogo</h2>
       <p>Esposizione permanente presso <a href="https://www.rct.uk/collection">Royal Collection Trust, Londra</a></p>
@@ -234,8 +243,9 @@
       <h2>Metadati</h2>
       <ul>
         <li><a href="leonardo3dc.xml" target="_blank">Metadati Dublin Core (XML)</a></li>
+        <li><a href="iccd.xml" target="_blank">Metadati ICCD (XML)</a></li>
         <li><a href="leonardo3.xml" target="_blank">Descrizione completa TEI (XML)</a></li>
-        <li><a href="https://viaf.org/viaf/24604206" target="_blank">Leonardo da Vinci su VIAF</a></li>
+        <li><a href="https://viaf.org/en/viaf/24604287" target="_blank">Leonardo da Vinci su VIAF</a></li>
         <li><a href="https://www.wikidata.org/wiki/Q762" target="_blank">Leonardo da Vinci su Wikidata</a></li>
       </ul>
     </section>
@@ -254,40 +264,47 @@
 
   <footer>
     <p>&copy; 2025 Viaggio nel Rinascimento</p>
+    <ul>
+      <li><a href="https://viaf.org/" target="_blank">VIAF</a></li>
+      <li><a href="https://www.getty.edu/research/tools/vocabularies/aat/" target="_blank">AAT Getty</a></li>
+      <li><a href="http://www.iccd.beniculturali.it/getFile.php?id=4489" target="_blank">ICCD</a></li>
+    </ul>
   </footer>
 <button id="backToTop" aria-label="Torna su" title="Torna su">&#8679;</button>
 
   <script>
     const images = [
-
       {
         src: 'img/Leonardo/leonardo3.jpg',
         alt: 'Studio anatomico di feto nell utero',
         title: 'Studio anatomico di feto nell utero',
         description: 'Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano.',
-        location: 'Royal Collection Trust.'
+        location: 'Royal Collection Trust.',
+        artistDate: 'Leonardo da Vinci – ca. 1511'
       },
-        
       {
         src: 'img/Leonardo/schizzoleo1.jpg',
         alt: 'Quattro studi per una Natività',
         title: 'Quattro studi per una Natività',
-        description: 'Questo disegno anatomico, meticolosamente eseguito da Leonardo da Vinci, testimonia il suo profondo interesse per la scienza e lo studio del corpo umano.',
-        location: 'Esposizione permanente presso il Metropolitan Museum Of Art di New York.'
+        description: 'Studio di composizione sacra, dove Leonardo sperimenta diverse pose e interazioni tra i personaggi.',
+        location: 'Esposizione permanente presso il Metropolitan Museum Of Art di New York.',
+        artistDate: 'Leonardo da Vinci – ca. 1478-1485'
       },
       {
         src: 'img/Leonardo/leonardo4.jpg',
         alt: 'Studio di Cavallo',
         title: 'Studio di Cavallo',
-        description: 'Studio sulle proporzioni ideali del corpo umano, riflettendo la ricerca scientifica di Leonardo.',
-        location: 'Royal Library at Windsor Castle'
+        description: 'Studio sulle proporzioni ideali del corpo equino, riflettendo la ricerca scientifica di Leonardo.',
+        location: 'Royal Library at Windsor Castle',
+        artistDate: 'Leonardo da Vinci – ca. 1490'
       },
       {
-        src: 'img/Leonardo/Itemleo1.jpg',
+        src: 'img/Leonardo/itemleo1.jpg',
         alt: 'Cartone di sant Anna',
         title: 'Cartone di sant Anna',
-        description: 'Disegno dettagliato dei gruppi muscolari, esempio dell’approccio analitico di Leonardo.',
-        location: 'National Gallery'
+        description: 'Studio compositivo e formale per il dipinto “Sant’Anna, la Vergine e il Bambino”, esempio dell’approccio analitico di Leonardo.',
+        location: 'National Gallery',
+        artistDate: 'Leonardo da Vinci – ca. 1501-1505'
       }
     ];
 
@@ -303,8 +320,7 @@
       imgEl.src = img.src;
       imgEl.alt = img.alt;
       titleEl.textContent = img.title;
-      // Rimane fisso il nome artista e data
-      subtitleEl.textContent = 'Leonardo da Vinci – ca. 1490';
+      subtitleEl.textContent = img.artistDate; // dinamico ora
       descriptionEl.textContent = img.description;
       locationEl.textContent = img.location;
     }
@@ -321,23 +337,23 @@
 
     // inizializza la pagina
     updateContent();
+
     const backToTopBtn = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) { // mostra il bottone dopo aver scrollato 200px
-    backToTopBtn.style.display = 'block';
-  } else {
-    backToTopBtn.style.display = 'none';
-  }
-});
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'  // scroll dolce verso l'alto
-  });
-});
-
-  </script>
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+</script>
 </body>
 </html>
