@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<F schemaversion="1.04" xmlns="http://www.iccd.beniculturali.it/schedaF">
+  <!-- Identificazione generale -->
+  <IDC>leonardo3</IDC>
+  <OGT>F</OGT>
+  <OGTD>Studio anatomico di feto nell'utero</OGTD>
+
+  <!-- Informazioni sull’ente e compilazione -->
+  <IS>
+    <ISE>Viaggio nel Rinascimento</ISE>
+  </IS>
+  <DTZ>2025-06-24</DTZ>
+  <LG>it</LG>
+
+  <!-- Oggetto dell’opera -->
+  <OG>
+    <OGT>Disegno</OGT>
+    <OGTD>Studio anatomico di feto nell'utero</OGTD>
+  </OG>
+
+  <!-- Autore -->
+  <AU>
+    <AUT>
+      <AUTN>Leonardo da Vinci</AUTN>
+      <AUTD>1452-1519</AUTD>
+      <AUTR>attribuito</AUTR>
+    </AUT>
+  </AU>
+
+  <!-- Datazione -->
+  <DA>
+    <DAE>ca. 1511</DAE>
+  </DA>
+
+  <!-- Tecnica/materiale -->
+  <MT>
+    <MTC>Penna e inchiostro su carta</MTC>
+  </MT>
+
+  <!-- Dimensioni -->
+  <DO>
+    <DOD>30.4 x 22.0 cm</DOD>
+  </DO>
+
+  <!-- Collocazione -->
+  <LC>
+    <LDC>
+      <LDCL>Royal Collection Trust</LDCL>
+      <LDCN>Londra</LDCN>
+    </LDC>
+  </LC>
+
+  <!-- Descrizione -->
+  <CD>
+    <CDC>Disegno anatomico che mostra un feto nell’utero accompagnato da annotazioni speculari. Riflette l’interesse di Leonardo per l’anatomia umana e per lo studio diretto dei cadaveri, un unicum tra arte e scienza nel Rinascimento.</CDC>
+  </CD>
+
+  <!-- Soggetti / parole chiave -->
+  <SG>
+    <SGL>Anatomia</SGL>
+    <SGL>Corpo umano</SGL>
+    <SGL>Rinascimento</SGL>
+    <SGL>Leonardo da Vinci</SGL>
+    <SGL>Disegno</SGL>
+  </SG>
+
+  <!-- Immagine associata -->
+  <IM>
+    <IMS>img/Leonardo/leonardo3.jpg</IMS>
+    <IMD>Studio anatomico di feto nell'utero</IMD>
+    <IMR>Royal Collection Trust</IMR>
+  </IM>
+</F>
