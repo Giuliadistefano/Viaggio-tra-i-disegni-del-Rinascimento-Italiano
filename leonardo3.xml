@@ -2,74 +2,98 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Studio del feto nell’utero</title>
-        <author>Leonardo da Vinci</author>
+        <title>Studio anatomico del feto nell’utero</title>
+        <author>
+          <persName>
+            <forename>Leonardo</forename>
+            <surname>da Vinci</surname>
+          </persName>
+        </author>
       </titleStmt>
-      <publicationStmt>
-        <publisher>Royal Collection Trust</publisher>
-        <pubPlace>Windsor Castle</pubPlace>
-        <date when="2025">2025</date>
-      </publicationStmt>
       <sourceDesc>
-        <msDesc>
-          <msIdentifier>
-            <institution>Royal Collection Trust</institution>
-            <repository>Royal Library, Windsor Castle</repository>
-            <idno>RCIN 919102</idno>
-          </msIdentifier>
-          <physDesc>
-            <objectDesc>
-              <supportDesc>
-                <support>Paper, pen and ink with some wash, over traces of black chalk.</support>
-              </supportDesc>
-            </objectDesc>
-            <handDesc>
-              <handNote>Mirror writing by Leonardo in brown ink.</handNote>
-            </handDesc>
-            <additions>Accompanied by anatomical sketches and notes surrounding the main image.</additions>
-            <extent>1 sheet</extent>
-          </physDesc>
-          <history>
-            <origin>
-              <origPlace>Italy, likely Milan</origPlace>
-              <origDate when="1511">circa 1511</origDate>
-            </origin>
-            <provenance>
-              <p>Part of the Anatomical Manuscript A, later acquired by the British Royal Collection.</p>
-            </provenance>
-          </history>
-        </msDesc>
+        <biblStruct>
+          <monogr>
+            <title level="m">Leonardo. L'anatomia. Ediz. illustrata</title>
+            <author>
+              <persName>
+                <forename>Carlo</forename>
+                <surname>Pedretti</surname>
+              </persName>
+            </author>
+            <author>
+              <persName>
+                <forename>Domenico</forename>
+                <surname>Laurenza</surname>
+              </persName>
+            </author>
+            <author>
+              <persName>
+                <forename>Paola</forename>
+                <surname>Salvi</surname>
+              </persName>
+            </author>
+            <imprint>
+              <pubPlace>Firenze</pubPlace>
+              <publisher>Giunti</publisher>
+              <date when="2005">2005</date>
+            </imprint>
+          </monogr>
+          <analytic>
+            <title level="a">Studio del feto nell’utero</title>
+            <author>
+              <persName>
+                <forename>Giulia</forename>
+                <surname>Di Stefano</surname>
+              </persName>
+            </author>
+          </analytic>
+        </biblStruct>
       </sourceDesc>
     </fileDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="en">English</language>
-        <language ident="it">Italian</language>
-      </langUsage>
-      <textClass>
-        <keywords>
-          <term>anatomy</term>
-          <term>fetus</term>
-          <term>Leonardo da Vinci</term>
-          <term>Renaissance drawing</term>
-          <term>mirror writing</term>
-        </keywords>
-      </textClass>
-    </profileDesc>
   </teiHeader>
 
-  <facsimile>
-    <graphic url="https://www.rct.uk/sites/default/files/collection-online/d/5/237107-1522146961.jpg" />
-  </facsimile>
-
-    <text>
+  <text>
     <body>
-      <div type="description">
-        <p>This sheet by Leonardo da Vinci contains one of the earliest accurate renderings of a fetus in the womb, accompanied by anatomical and conceptual notes. It exemplifies his intense study of human reproduction and internal organs.</p>
-      </div>
+      <div type="criticism" xml:id="leonardo_feto">
+        <p>
+          Lo <title type="artwork">Studio anatomico del feto nell’utero</title> realizzato da 
+          <persName>Leonardo da Vinci</persName> attorno al 
+          <date when="1511">1511</date>, rappresenta uno dei vertici dell’indagine anatomica rinascimentale. Il disegno è oggi conservato presso la 
+          <orgName>Royal Collection Trust</orgName> al 
+          <placeName>Castello di Windsor</placeName>.
+        </p>
 
-      <div type="transcription" xml:lang="it">
-        <p>Questo foglio di Leonardo da Vinci contiene una delle prime rappresentazioni accurate di un feto nell’utero, accompagnata da annotazioni anatomiche e concettuali. Rappresenta un esempio dell’intenso studio che l’artista dedicò alla riproduzione umana e agli organi interni.</p>
+        <p>
+          Il feto è raffigurato con precisione quasi scientifica all’interno dell’utero femminile, accompagnato da dettagli anatomici come la placenta, l’utero sezionato e vasi sanguigni, tracciati con straordinaria chiarezza. Questo documento visivo rivela lo studio diretto su cadavere e l’interesse del maestro per la 
+          <tech>dissezione anatomica</tech>.
+        </p>
+
+        <p>
+          Nonostante alcune imprecisioni (come la posizione del feto, erroneamente disegnata come verticale), Leonardo dimostra un’eccezionale capacità di unire 
+          <q>occhio artistico</q> e rigore empirico. 
+        </p>
+
+        <p>
+          <seg type="analisi">Si tratta di un’opera che trascende il semplice interesse scientifico: la composizione, la resa chiaroscurale e l’attenzione al dettaglio formano un insieme coerente che unisce arte, scienza e filosofia naturale.</seg>
+        </p>
+
+        <p>
+          Questo disegno fa parte di una più ampia campagna di studi anatomici condotti da Leonardo a partire dal 
+          <date when="1507">1507</date>, durante il suo soggiorno a 
+          <placeName type="città">Milano</placeName> e successivamente a 
+          <placeName type="città">Firenze</placeName>.
+        </p>
+
+        <p>
+          La tradizione manoscritta include il foglio in questione all’interno del cosiddetto 
+          <title type="ms">Codice Anatomico A</title>, realizzato su 
+          <material>carta</material> con 
+          <tech>penna e inchiostro bruno</tech>, e accompagnato da annotazioni in scrittura speculare.
+        </p>
+
+        <p>
+          <seg type="interpretazione">Questo studio non è solo un documento anatomico ma un manifesto del pensiero leonardesco, in cui la conoscenza del corpo umano diventa via d’accesso alla comprensione della natura e del cosmo.</seg>
+        </p>
       </div>
     </body>
   </text>
